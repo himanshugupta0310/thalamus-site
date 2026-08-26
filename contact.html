@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Thalamus</title>
+<meta name="description" content="Book a demo with Thalamus or get in touch directly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+      THALAMUS
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Book a demo</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Tell us what your agents are struggling to reason over.</h1>
+    <p class="lede">Fifteen minutes on your current data pipeline is usually enough to tell whether Thalamus is a fit.</p>
+  </div>
+</header>
+
+<section id="form" style="padding-top: 0;">
+  <div class="wrap two-col">
+    <div>
+      <form class="contact-form">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" required>
+          </div>
+          <div class="full">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="full">
+            <label for="role">What are you building?</label>
+            <select id="role" name="role">
+              <option>Clinical agent or copilot</option>
+              <option>AI scribe</option>
+              <option>Care management / decision support</option>
+              <option>Virtual care / digital health platform</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">What's the context problem you're hitting?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </div>
+        <div style="margin-top:22px; display:flex; align-items:center; gap:18px;">
+          <button type="submit" class="btn btn-primary">Send</button>
+          <span class="form-status form-note"></span>
+        </div>
+      </form>
+    </div>
+    <div>
+      <div class="eyebrow">Direct</div>
+      <p style="font-size:17px;">hello@thalamuslabs.ai</p>
+      <p class="form-note" style="margin-top:24px;">We read every message and reply within a couple of business days. If you'd rather skip the form, email is the fastest path.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="logo">
+        <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+        THALAMUS
+      </a>
+      <p class="footer-meta" style="margin-top:10px;">Infrastructure for clinical AI agents.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-meta">© 2026 Thalamus Labs</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

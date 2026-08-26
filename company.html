@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company — Thalamus</title>
+<meta name="description" content="Why Thalamus exists, where the name comes from, and what we believe about the future of clinical AI agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+      THALAMUS
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html" aria-current="page">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Book a demo</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Company</div>
+    <h1>Named for the brain's own relay station.</h1>
+    <p class="lede">The thalamus filters and routes incoming signal to the right part of the brain for processing. We think clinical AI needs the same layer — something that sits between raw patient data and every agent trying to reason over it.</p>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Why now</div>
+      <h2 style="font-size:26px;">Millions of narrow-task clinical agents are coming.</h2>
+    </div>
+    <div>
+      <p class="quote-block">Each one needs a precise slice of a patient's history for its task — not the full longitudinal record. Handing an agent everything doesn't make it smarter. It makes it slower, more expensive, and more likely to hallucinate.</p>
+      <p style="margin-top:20px; color: var(--mist); font-size:15px;">Wearables and patient check-ins with agents are only going to add to that volume. The teams building clinical agents shouldn't each have to solve context filtering on their own.</p>
+    </div>
+  </div>
+</section>
+
+<section id="origin" class="dark">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Where this came from</div>
+      <h2 style="font-size:26px;">Built out of a problem we hit directly.</h2>
+    </div>
+    <div>
+      <p style="color:#C7CDD2; font-size:16px; line-height:1.7;">Turning each incoming report into a summary, then merging summaries into one master record, kept losing clinical quality — causing hallucination, added cost and added latency. It became clear every team building a clinical agent runs into the same wall. Thalamus is the infrastructure layer we built to solve it once, properly, instead of every team solving it badly on their own.</p>
+    </div>
+  </div>
+</section>
+
+<section id="believe">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we believe</div>
+      <h2>A short list of positions the product is built on.</h2>
+    </div>
+    <ul class="list-plain">
+      <li>Context should be compiled per task, not dumped in full — more history is not more signal.</li>
+      <li>Every data point an agent sees should trace back to a real source document.</li>
+      <li>Conflicting data should be surfaced explicitly, never silently resolved by the agent.</li>
+      <li>Patient state should update the moment new data arrives, not on a batch schedule.</li>
+      <li>This is infrastructure for the companies building agents — not a product for hospitals or patients directly.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Want to talk through your use case?</h2>
+      <p>We're happy to look at your data and your agent's failure modes directly.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Book a demo <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="logo">
+        <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+        THALAMUS
+      </a>
+      <p class="footer-meta" style="margin-top:10px;">Infrastructure for clinical AI agents.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-meta">© 2026 Thalamus Labs</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

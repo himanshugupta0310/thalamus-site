@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product — Thalamus</title>
+<meta name="description" content="How Thalamus turns raw patient data into routed, explainable context for clinical AI agents: L1 raw data, L2 atomic clinical data points, L3 computed patient state, L4 intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+      THALAMUS
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" aria-current="page">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Book a demo</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Product</div>
+    <h1>Raw data in. Routed, explainable context out.</h1>
+    <p class="lede">Thalamus is a four-layer pipeline that turns every document a patient generates into a live, queryable patient state — and compiles the right slice of it for each agent, each time.</p>
+    <div class="pipeline">
+      <span class="node">L1 Raw data</span><span class="arrow">→</span>
+      <span class="node">L2 Atomic facts</span><span class="arrow">→</span>
+      <span class="node">L3 Patient state</span><span class="arrow">→</span>
+      <span class="node">L4 Agent context</span>
+    </div>
+  </div>
+</header>
+
+<section id="l1">
+  <div class="wrap two-col">
+    <div>
+      <span class="tag" style="font-family:var(--font-mono); font-size:13px; color:var(--signal);">L1</span>
+      <h2 style="margin-top:10px; font-size:28px;">Raw clinical data</h2>
+      <p class="lede" style="margin-top:14px;">Every source document a patient generates, kept in full. Nothing is discarded here — this layer is the system of record underneath everything Thalamus computes.</p>
+    </div>
+    <ul class="list-plain">
+      <li>EHR exports</li>
+      <li>Lab and imaging reports</li>
+      <li>Clinical PDFs and scanned notes</li>
+      <li>Wearable data</li>
+      <li>Agent conversation transcripts</li>
+      <li>Doctor notes and insurance data</li>
+    </ul>
+  </div>
+</section>
+
+<section id="l2">
+  <div class="wrap two-col">
+    <div>
+      <span class="tag" style="font-family:var(--font-mono); font-size:13px; color:var(--signal);">L2</span>
+      <h2 style="margin-top:10px; font-size:28px;">Atomic Clinical Data Points</h2>
+      <p class="lede" style="margin-top:14px;">Every document is broken down into discrete clinical facts — Atomic Clinical Data Points, or ACDPs. Each one carries roughly ten metadata tags today, a set built to grow past a hundred: category, organ system, asserter, temporal information, source and confidence among them. A single patient can hold thousands.</p>
+    </div>
+    <div>
+      <div class="quote-block" style="font-size:16px; font-family:var(--font-mono); border-left-color: var(--steel);">
+        Diagnosed with dyslipidemia<br>
+        LDL = 168 mg/dL<br>
+        Underwent bilateral RIRS<br>
+        Complains of right flank pain<br>
+        Prescribed Atorvastatin<br>
+        Creatinine = 1.1
+      </div>
+      <p class="form-note" style="margin-top:16px;">Every ACDP links back to its original document, timestamp and provenance.</p>
+    </div>
+  </div>
+</section>
+
+<section id="l3">
+  <div class="wrap two-col">
+    <div>
+      <span class="tag" style="font-family:var(--font-mono); font-size:13px; color:var(--signal);">L3</span>
+      <h2 style="margin-top:10px; font-size:28px;">Computed patient state</h2>
+      <p class="lede" style="margin-top:14px;">L3 performs inference over the atomic layer to determine the patient's current state — and stays current automatically as new documents arrive.</p>
+    </div>
+    <ul class="list-plain">
+      <li>Whether a diagnosis is active or resolved</li>
+      <li>Current medications</li>
+      <li>Disease control status</li>
+      <li>Longitudinal trends across visits</li>
+      <li>A current, up-to-date patient profile</li>
+    </ul>
+  </div>
+</section>
+
+<section id="l4" class="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag" style="font-family:var(--font-mono); font-size:13px; color: var(--signal);">L4</span>
+      <h2 style="margin-top:10px;">The intelligence layer</h2>
+      <p>Three capabilities sit on top of the computed patient state, each consuming it differently.</p>
+    </div>
+    <div class="layer-list" style="border-top-color: var(--line-dark);">
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L4A</span>
+        <h3>Agent context compiler</h3>
+        <p class="desc">Different agents need different context — a pregnancy agent doesn't need a full dermatology history. The compiler decides which patient state, which ACDPs and which context each specific agent receives, and prepares the input it's given.</p>
+      </div>
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L4B</span>
+        <h3>Guideline recommender</h3>
+        <p class="desc">Ingests clinical guidelines from bodies including ADA, USPSTF, AHA, ASCO and ATA, and determines which apply, which recommendations are relevant, and which screenings should surface for this patient's current state.</p>
+      </div>
+      <div class="layer">
+        <span class="tag">L4C</span>
+        <h3>Clinical intelligence</h3>
+        <p class="desc">Proactively surfaces care gaps, preventive opportunities, missing follow-ups, clinical risks and unresolved issues — before the downstream agent starts reasoning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="continuous">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Continuous updating</div>
+      <h2 style="font-size:28px;">Event-driven, not batch.</h2>
+      <p class="lede" style="margin-top:14px;">Every new document — a lab result, a follow-up note, a five-minute agent call — flows through the same pipeline the moment it arrives, so the patient profile never goes stale.</p>
+    </div>
+    <div class="pipeline" style="flex-direction:column; align-items:flex-start; margin:0; gap:10px;">
+      <span class="node">New document</span>
+      <span class="node">L1 — ingested</span>
+      <span class="node">L2 — ACDP extraction</span>
+      <span class="node">L3 — patient state recomputed</span>
+      <span class="node">L4 — intelligence updates automatically</span>
+    </div>
+  </div>
+</section>
+
+<section id="explain">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Explainability</div>
+      <h2 style="font-size:28px;">Every answer traces back to a source.</h2>
+    </div>
+    <ul class="list-plain">
+      <li>Every ACDP links to its original document, timestamp and source</li>
+      <li>Every computed patient state traces back to the ACDPs that support it</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>See it against your own data.</h2>
+      <p>Bring a real patient record set and we'll walk through what Thalamus routes to your agent.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Book a demo <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="logo">
+        <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+        THALAMUS
+      </a>
+      <p class="footer-meta" style="margin-top:10px;">Infrastructure for clinical AI agents.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-meta">© 2026 Thalamus Labs</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

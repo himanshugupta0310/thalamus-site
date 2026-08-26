@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thalamus — Infrastructure for clinical AI agents</title>
+<meta name="description" content="Thalamus filters, structures and routes raw patient data into the precise clinical context each AI agent needs — nothing more, nothing less.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+      THALAMUS
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-primary">Book a demo</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Infrastructure for clinical AI agents</div>
+      <h1>Every agent needs a slice of the patient's history — not all of it.</h1>
+      <p class="lede">Thalamus filters, structures and routes raw clinical data into exactly the context each agent needs to reason well: no more, no less, and every point traceable back to its source.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Book a demo <span class="btn-arrow">→</span></a>
+        <a href="product.html" class="btn btn-ghost">See the architecture</a>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <div class="trace-row">
+        <span class="trace-label">L1</span>
+        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 15 L14 4 L26 26 L40 8 L52 22 L66 3 L80 27 L94 10 L108 20 L122 6 L136 24 L150 12 L164 18 L178 5 L192 25 L206 9 L220 21 L234 7 L248 23 L262 11 L276 19 L290 4 L304 26 L318 8 L332 22 L346 13 L360 17 L374 6 L388 24 L400 15"/></svg>
+      </div>
+      <div class="trace-row">
+        <span class="trace-label">L2</span>
+        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 20 L30 12 L60 22 L90 14 L120 20 L150 10 L180 22 L210 14 L240 20 L270 12 L300 21 L330 15 L360 20 L400 14"/></svg>
+      </div>
+      <div class="trace-row">
+        <span class="trace-label">L3</span>
+        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 18 L60 15 L130 20 L200 16 L270 19 L340 15 L400 17"/></svg>
+      </div>
+      <div class="trace-row">
+        <span class="trace-label">L4</span>
+        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 15 L400 15"/></svg>
+      </div>
+      <div class="hero-figure-caption">
+        <span>RAW PATIENT DATA</span>
+        <span>ROUTED AGENT CONTEXT</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The problem</div>
+      <h2>Clinical AI companies drown their own agents in context.</h2>
+      <p>Patient data arrives from EHRs, lab reports, imaging, clinical PDFs, wearables, doctor notes and agent conversations — fragmented across sources, duplicated across visits, and accumulating over years. Most teams hand all of it to the agent and hope it finds what matters.</p>
+    </div>
+    <div class="chip-row">
+      <div class="chip"><div class="k">RESULT 01</div><div class="v">Lower quality reasoning</div></div>
+      <div class="chip"><div class="k">RESULT 02</div><div class="v">Higher hallucination rate</div></div>
+      <div class="chip"><div class="k">RESULT 03</div><div class="v">Unnecessary token usage</div></div>
+      <div class="chip"><div class="k">RESULT 04</div><div class="v">Added latency, weaker coherence</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="architecture" class="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The architecture</div>
+      <h2>Four layers, one continuously updating patient state.</h2>
+      <p>Named for the brain's own relay station — the structure that filters and routes signal to the right destination. Thalamus does the same for clinical data.</p>
+    </div>
+    <div class="layer-list" style="border-top-color: var(--line-dark);">
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L1</span>
+        <h3>Raw clinical data</h3>
+        <p class="desc">Every document a patient generates, kept in full. Nothing is discarded at this layer.</p>
+      </div>
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L2</span>
+        <h3>Atomic clinical data points</h3>
+        <p class="desc">Every document broken into discrete, tagged clinical facts — each one linked back to its source document, timestamp and provenance.</p>
+      </div>
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L3</span>
+        <h3>Computed patient state</h3>
+        <p class="desc">Active vs. resolved conditions, current medications, disease control, longitudinal trends — inferred from the atomic layer and kept current as new data arrives.</p>
+      </div>
+      <div class="layer" style="border-bottom-color: var(--line-dark);">
+        <span class="tag">L4</span>
+        <h3>Intelligence layer</h3>
+        <p class="desc">Compiles the right context for each agent, matches patient state against clinical guidelines, and surfaces care gaps before an agent starts reasoning.</p>
+      </div>
+    </div>
+    <div style="margin-top: 32px;">
+      <a href="product.html" class="btn btn-ghost" style="border-color:#3B4854; color: var(--paper);">Read the full architecture →</a>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who it's for</div>
+      <h2>Built for the companies building the agent, not the hospital or the patient.</h2>
+      <p>Thalamus sits as infrastructure between raw healthcare data and whatever's reasoning over it.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="tag">CATEGORY</span>
+        <h3>Clinical agents & scribes</h3>
+        <p>Teams building narrow-task agents and AI scribes that need a precise, task-scoped slice of context rather than a full chart dump.</p>
+      </div>
+      <div class="card">
+        <span class="tag">CATEGORY</span>
+        <h3>Care management & decision support</h3>
+        <p>Platforms that need a live, continuously updated view of patient state to flag risks, gaps and follow-ups as new data lands.</p>
+      </div>
+      <div class="card">
+        <span class="tag">CATEGORY</span>
+        <h3>Virtual care & digital health</h3>
+        <p>Products spanning many care journeys that need one consistent, explainable patient state underneath every agent they ship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="explainability">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">Explainability</div>
+      <h2>Nothing an agent sees is unaccountable.</h2>
+    </div>
+    <div>
+      <p class="quote-block">Every atomic data point links back to its original document, timestamp and source. Every computed patient state traces back to the atomic points that produced it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Building a clinical AI agent?</h2>
+      <p>Tell us what you're building and what your agents are struggling to reason over.</p>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Book a demo <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="index.html" class="logo">
+        <svg class="mark" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5"/><circle class="c2" cx="10" cy="10" r="3.2"/></svg>
+        THALAMUS
+      </a>
+      <p class="footer-meta" style="margin-top:10px;">Infrastructure for clinical AI agents.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="product.html">Product</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-meta">© 2026 Thalamus Labs</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
