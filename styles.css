@@ -509,8 +509,7 @@ textarea{ resize: vertical; min-height: 120px; }
   }
   .nav-links.open{ opacity: 1; transform: translateY(0); pointer-events: auto; }
   .nav-links a{ font-size: 16px; }
-  .nav-cta .btn-primary{ display: none; }
-  .nav-links .btn-primary{ display: inline-flex; margin-top: 6px; }
+  .nav-cta{ gap: 14px; }
   .nav-toggle{
     display: block;
     background: none;
