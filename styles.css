@@ -1,11 +1,11 @@
 /* ==========================================================================
-   THALAMUS — design tokens
+   THALAMUS: design tokens
    Palette: cool clinical paper, ink navy, steel-slate structure, sparse
    deep-signal red for flags. No warm cream, no terracotta, no near-black
    acid-accent defaults.
-   Type: Space Grotesk (display — technical, geometric, a little unusual),
-         IBM Plex Sans (body — built for technical/engineering communication),
-         IBM Plex Mono (utility — layer labels, tags, provenance, data)
+   Type: Space Grotesk (display, technical, geometric, a little unusual),
+         IBM Plex Sans (body, built for technical/engineering communication),
+         IBM Plex Mono (utility: layer labels, tags, provenance, data)
    ========================================================================== */
 
 :root{
@@ -439,7 +439,7 @@ footer{
   color: var(--ink-soft);
 }
 .list-plain li::before{
-  content: "—";
+  content: "•";
   color: var(--signal);
   font-family: var(--font-mono);
   flex: none;
