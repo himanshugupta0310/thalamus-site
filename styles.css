@@ -290,6 +290,95 @@ section:last-of-type{ border-bottom: none; }
   letter-spacing: 0.04em;
 }
 
+/* ------------------------------ home hero engine diagram ------------------------------ */
+
+.engine-diagram-card{
+  margin-top: 56px;
+  border: 1px solid var(--line);
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 32px clamp(16px, 3vw, 40px) 20px;
+}
+.eng-card{ fill: #FFFFFF; stroke: var(--line-dark); stroke-width: 1; }
+.eng-line{ stroke: var(--line-dark); stroke-width: 1.2; fill: none; opacity: 0.5; }
+.eng-line path{
+  stroke-dasharray: 340;
+  stroke-dashoffset: 340;
+  animation: eng-draw 0.9s ease forwards;
+}
+@keyframes eng-draw{ to{ stroke-dashoffset: 0; } }
+
+.eng-dot{ fill: var(--steel-light); opacity: 0; animation: eng-dot-in 0.3s ease forwards; }
+@keyframes eng-dot-in{ to{ opacity: 1; } }
+
+.eng-fade-in{ opacity: 0; animation: eng-fade 0.5s ease forwards; }
+@keyframes eng-fade{ from{ opacity: 0; transform: translateY(4px); } to{ opacity: 1; transform: translateY(0); } }
+
+.eng-step-hi{
+  fill: rgba(155,58,58,0.16);
+  stroke: var(--signal);
+  stroke-width: 1.6;
+  animation: eng-pulse 2.4s ease-in-out 1.6s infinite;
+  transform-origin: 520px 243px;
+}
+@keyframes eng-pulse{
+  0%, 100%{ stroke-width: 1.6; stroke-opacity: 1; }
+  50%{ stroke-width: 2.4; stroke-opacity: 0.75; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .eng-line path{ animation: none; stroke-dashoffset: 0; }
+  .eng-dot{ animation: none; opacity: 1; }
+  .eng-fade-in{ animation: none; opacity: 1; transform: none; }
+  .eng-step-hi{ animation: none; }
+}
+.eng-dot{ fill: var(--steel-light); }
+.eng-label{
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  fill: var(--ink);
+}
+.eng-core-card{ fill: var(--ink); stroke: var(--line-dark); stroke-width: 1; }
+.eng-core-title{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  fill: var(--paper);
+  letter-spacing: 0.02em;
+}
+.eng-core-sub{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  fill: #8FA0AC;
+}
+.eng-step{ fill: #1B232C; stroke: #33404C; stroke-width: 1; }
+.eng-step-hi{ fill: rgba(155,58,58,0.16); stroke: var(--signal); stroke-width: 1.6; }
+.eng-step-tag{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  fill: #7C8894;
+}
+.eng-step-tag-hi{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  fill: var(--signal);
+  font-weight: 500;
+}
+.eng-step-text{
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  fill: #C7CDD2;
+}
+.eng-step-text-hi{
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--paper);
+}
+
 /* ------------------------------ chip / stat row ------------------------------ */
 
 .chip-row{
@@ -507,6 +596,8 @@ textarea{ resize: vertical; min-height: 120px; }
 /* --------------------------------- responsive --------------------------------- */
 
 @media (max-width: 900px){
+  .engine-diagram-card{ overflow-x: auto; }
+  .engine-diagram-card svg{ min-width: 680px; }
   .hero-grid{ grid-template-columns: 1fr; }
   .two-col{ grid-template-columns: 1fr; gap: 36px; }
   .card-grid{ grid-template-columns: 1fr; }
