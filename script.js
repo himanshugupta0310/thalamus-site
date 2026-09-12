@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.eng2-flow').forEach(function (el) {
+      el.style.display = 'none';
+    });
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
   if (toggle && links) {
@@ -17,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       var status = form.querySelector('.form-status');
       if (status) {
-        status.textContent = 'This form isn\u2019t wired to a backend yet \u2014 email hello@thalamuslabs.ai directly for now.';
+        status.textContent = 'This form isn\u2019t wired to a backend yet, email hello@thalamuslabs.ai directly for now.';
       }
     });
   }
