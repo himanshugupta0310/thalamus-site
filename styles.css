@@ -282,7 +282,7 @@ section:last-of-type{ border-bottom: none; }
 .bp-node{ fill: #FFFFFF; stroke: var(--line-dark); stroke-width: 1.4; }
 .bp-node-hi{ fill: var(--signal); stroke: var(--signal); }
 .bp-hpp{ fill: #FFFFFF; stroke: var(--line-dark); stroke-width: 1.4; }
-.bp-hpp-hi{ fill: url(#bp-hatch); stroke: var(--signal); stroke-width: 2; }
+.bp-hpp-hi{ fill: var(--signal); stroke: var(--signal); stroke-width: 2; }
 .bp-label{
   font-family: var(--font-mono);
   font-size: 11px;
