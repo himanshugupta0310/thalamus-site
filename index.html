@@ -42,74 +42,60 @@
     </div>
 
     <div class="engine-diagram-card">
-      <svg viewBox="0 0 1040 400" preserveAspectRatio="xMidYMid meet" style="width:100%; height:auto;">
-        <g class="eng-line">
-          <path d="M190,56 C260,56 260,200 330,200" style="animation-delay:0.05s;"></path>
-          <path d="M190,200 L330,200" style="animation-delay:0.05s;"></path>
-          <path d="M190,344 C260,344 260,200 330,200" style="animation-delay:0.05s;"></path>
-          <path d="M330,200 L420,200" style="animation-delay:0.4s;"></path>
-          <path d="M620,200 L710,200" style="animation-delay:0.75s;"></path>
-          <path d="M710,200 C780,200 780,56 850,56" style="animation-delay:0.95s;"></path>
-          <path d="M710,200 L850,200" style="animation-delay:0.95s;"></path>
-          <path d="M710,200 C780,200 780,344 850,344" style="animation-delay:0.95s;"></path>
-        </g>
-        <circle class="eng-dot" cx="330" cy="200" r="4" style="animation-delay:0.35s;"></circle>
-        <circle class="eng-dot" cx="710" cy="200" r="4" style="animation-delay:0.7s;"></circle>
+      <div class="engine2">
+        <svg viewBox="0 0 1000 640" style="position:absolute;inset:0;width:100%;height:100%">
+          <path class="eng2-line" d="M160,120 C200,120 200,320 230,320 L700,320 C800,320 800,120 840,120"></path>
+          <path class="eng2-line" d="M160,320 L840,320"></path>
+          <path class="eng2-line" d="M160,520 C200,520 200,320 230,320 L700,320 C800,320 800,520 840,520"></path>
+          <circle class="eng2-dot-static" cx="230" cy="320" r="6"></circle>
+          <circle class="eng2-dot-static" cx="770" cy="320" r="6"></circle>
 
-        <circle class="eng-flow-main" cx="190" cy="200" r="5"></circle>
-        <circle class="eng-flow-branch eng-flow-branch-1" cx="710" cy="200" r="4"></circle>
-        <circle class="eng-flow-branch eng-flow-branch-2" cx="710" cy="200" r="4"></circle>
-        <circle class="eng-flow-branch eng-flow-branch-3" cx="710" cy="200" r="4"></circle>
+          <circle class="eng2-flow" r="6">
+            <animateMotion dur="4s" repeatCount="indefinite" begin="0s" path="M160,120 C200,120 200,320 230,320 L700,320 C800,320 800,120 840,120"></animateMotion>
+          </circle>
+          <circle class="eng2-flow" r="6">
+            <animateMotion dur="4s" repeatCount="indefinite" begin="1.3s" path="M160,320 L840,320"></animateMotion>
+          </circle>
+          <circle class="eng2-flow" r="6">
+            <animateMotion dur="4s" repeatCount="indefinite" begin="2.6s" path="M160,520 C200,520 200,320 230,320 L700,320 C800,320 800,520 840,520"></animateMotion>
+          </circle>
+        </svg>
 
-        <g class="eng-fade-in" style="animation-delay:0s;">
-          <rect class="eng-card" x="0" y="20" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="24" y="62">Labs / notes /</text>
-          <text class="eng-label" x="24" y="80">other reports</text>
+        <div class="eng2-card" style="left:2%;top:12.5%;width:14%;height:12.5%;">
+          <span class="eng2-card-dot"></span>
+          <span class="eng2-card-label">Labs / notes / other reports</span>
+        </div>
+        <div class="eng2-card" style="left:2%;top:43.75%;width:14%;height:12.5%;">
+          <span class="eng2-card-dot"></span>
+          <span class="eng2-card-label">Wearable data</span>
+        </div>
+        <div class="eng2-card" style="left:2%;top:75%;width:14%;height:12.5%;">
+          <span class="eng2-card-dot"></span>
+          <span class="eng2-card-label">Agent call transcripts</span>
+        </div>
 
-          <rect class="eng-card" x="0" y="164" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="24" y="206">Wearable data</text>
+        <div class="eng2-core" style="left:30%;top:6.25%;width:40%;height:87.5%;">
+          <span class="eng2-badge">Thalamus</span>
+          <span class="eng2-sub">Data engine</span>
+          <span class="eng2-pill">L1&nbsp;&nbsp;Ingest</span>
+          <span class="eng2-pill">L2&nbsp;&nbsp;Structure</span>
+          <span class="eng2-pill-hi">L3&nbsp;&nbsp;Propagate</span>
+          <span class="eng2-pill">L4&nbsp;&nbsp;Serve</span>
+        </div>
 
-          <rect class="eng-card" x="0" y="308" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="24" y="350">Agent call transcripts</text>
-        </g>
+        <div class="eng2-card" style="left:84%;top:12.5%;width:14%;height:12.5%;">
+          <span class="eng2-card-label">Clinical context</span>
+        </div>
+        <div class="eng2-card" style="left:84%;top:43.75%;width:14%;height:12.5%;">
+          <span class="eng2-card-label">Guideline recommender</span>
+        </div>
+        <div class="eng2-card" style="left:84%;top:75%;width:14%;height:12.5%;">
+          <span class="eng2-live-dot"></span>
+          <span class="eng2-card-label">Care gaps &amp; risks</span>
+        </div>
 
-        <g class="eng-fade-in" style="animation-delay:0.35s;">
-          <rect class="eng-core-card" x="420" y="10" width="200" height="380" rx="6"></rect>
-          <text class="eng-core-title" x="520" y="52" text-anchor="middle">THALAMUS</text>
-          <text class="eng-core-sub" x="520" y="70" text-anchor="middle">DATA ENGINE</text>
-
-          <rect class="eng-step" x="440" y="100" width="160" height="46" rx="3"></rect>
-          <text class="eng-step-tag" x="456" y="128">L1</text>
-          <text class="eng-step-text" x="490" y="128">Ingest</text>
-
-          <rect class="eng-step" x="440" y="160" width="160" height="46" rx="3"></rect>
-          <text class="eng-step-tag" x="456" y="188">L2</text>
-          <text class="eng-step-text" x="490" y="188">Structure</text>
-
-          <rect class="eng-step-hi" x="440" y="220" width="160" height="46" rx="3"></rect>
-          <text class="eng-step-tag-hi" x="456" y="248">L3</text>
-          <text class="eng-step-text-hi" x="490" y="248">Propagate</text>
-
-          <rect class="eng-step" x="440" y="280" width="160" height="46" rx="3"></rect>
-          <text class="eng-step-tag" x="456" y="308">L4</text>
-          <text class="eng-step-text" x="490" y="308">Serve</text>
-        </g>
-
-        <g class="eng-fade-in" style="animation-delay:1s;">
-          <rect class="eng-card" x="850" y="20" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="874" y="62">Clinical context</text>
-
-          <rect class="eng-card" x="850" y="164" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="874" y="206">Guideline</text>
-          <text class="eng-label" x="874" y="224">recommender</text>
-
-          <rect class="eng-card" x="850" y="308" width="190" height="72" rx="4"></rect>
-          <text class="eng-label" x="874" y="350">Care gaps &amp; risks</text>
-        </g>
-      </svg>
-      <div class="hero-figure-caption" style="margin-top:14px;">
-        <span>RAW PATIENT DATA</span>
-        <span>COMPUTED PATIENT STATE</span>
+        <div class="eng2-caption" style="left:2%;width:14%;top:90%;">RAW PATIENT DATA</div>
+        <div class="eng2-caption" style="left:84%;width:14%;top:90%;">COMPUTED PATIENT STATE</div>
       </div>
     </div>
   </div>
