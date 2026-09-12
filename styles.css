@@ -331,6 +331,39 @@ section:last-of-type{ border-bottom: none; }
   .eng-dot{ animation: none; opacity: 1; }
   .eng-fade-in{ animation: none; opacity: 1; transform: none; }
   .eng-step-hi{ animation: none; }
+  .eng-flow-main, .eng-flow-branch{ animation: none; opacity: 0; }
+}
+
+/* traveling signal: left input -> engine -> encircles the engine card -> radiates to 3 outputs */
+.eng-flow-main{
+  fill: var(--signal);
+  offset-path: path('M190,200 L420,200 L420,10 L620,10 L620,390 L420,390 L420,200 L620,200 L710,200');
+  offset-rotate: 0deg;
+  animation: eng-flow-main 4.2s linear infinite;
+  animation-delay: 2s;
+}
+.eng-flow-branch{
+  fill: var(--signal);
+  offset-rotate: 0deg;
+  animation: eng-flow-branch 4.2s linear infinite;
+  animation-delay: 2s;
+}
+.eng-flow-branch-1{ offset-path: path('M710,200 C780,200 780,56 850,56'); }
+.eng-flow-branch-2{ offset-path: path('M710,200 L850,200'); }
+.eng-flow-branch-3{ offset-path: path('M710,200 C780,200 780,344 850,344'); }
+
+@keyframes eng-flow-main{
+  0%{ offset-distance: 0%; opacity: 0; }
+  2%{ opacity: 1; }
+  68%{ offset-distance: 100%; opacity: 1; }
+  71%{ offset-distance: 100%; opacity: 0; }
+  100%{ offset-distance: 100%; opacity: 0; }
+}
+@keyframes eng-flow-branch{
+  0%, 71%{ offset-distance: 0%; opacity: 0; }
+  73%{ offset-distance: 0%; opacity: 1; }
+  97%{ offset-distance: 100%; opacity: 1; }
+  100%{ offset-distance: 100%; opacity: 0; }
 }
 .eng-dot{ fill: var(--steel-light); }
 .eng-label{
