@@ -277,11 +277,11 @@ section:last-of-type{ border-bottom: none; }
   border-radius: 4px;
   padding: 28px 24px 20px;
 }
-.bp-muted{ stroke: var(--steel-light); stroke-width: 1; opacity: 0.55; }
+.bp-muted{ stroke: var(--steel-light); stroke-width: 1; opacity: 0.5; }
 .bp-emph{ stroke: var(--signal); stroke-width: 2; }
-.bp-node{ fill: none; stroke: var(--steel-light); stroke-width: 1.4; }
-.bp-node-hi{ fill: var(--signal); }
-.bp-hpp{ fill: none; stroke: var(--steel-light); stroke-width: 1.4; }
+.bp-node{ fill: #FFFFFF; stroke: var(--line-dark); stroke-width: 1.4; }
+.bp-node-hi{ fill: var(--signal); stroke: var(--signal); }
+.bp-hpp{ fill: #FFFFFF; stroke: var(--line-dark); stroke-width: 1.4; }
 .bp-hpp-hi{ fill: url(#bp-hatch); stroke: var(--signal); stroke-width: 2; }
 .bp-label{
   font-family: var(--font-mono);
@@ -292,113 +292,105 @@ section:last-of-type{ border-bottom: none; }
 
 /* ------------------------------ home hero engine diagram ------------------------------ */
 
-.engine-diagram-card{
-  margin-top: 56px;
-  border: 1px solid var(--line);
-  background: #FFFFFF;
-  border-radius: 4px;
-  padding: 32px clamp(16px, 3vw, 40px) 36px;
-}
 .engine2{
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 480px;
   aspect-ratio: 1000/640;
 }
-.eng2-line{ fill: none; stroke: var(--line-dark); stroke-width: 3; opacity: 0.5; }
+.eng2-line{ fill: none; stroke: var(--line-dark); stroke-width: 3; opacity: 0.4; }
 .eng2-dot-static{ fill: var(--steel-light); }
 .eng2-flow{ fill: var(--signal); }
 
 .eng2-card{
   position: absolute;
-  border: 1px solid var(--line-dark);
-  border-radius: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 6px;
+  gap: 5px;
+  padding: 5px;
   text-align: center;
 }
 .eng2-card-dot{
-  width: 7px; height: 7px;
+  width: 6px; height: 6px;
   border-radius: 999px;
   background: var(--steel-light);
 }
 .eng2-card-label{
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 10.5px;
   font-weight: 600;
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .eng2-core{
   position: absolute;
-  border: 1px solid var(--line-dark);
-  border-radius: 20px;
-  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper-dim);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px;
+  gap: 8px;
+  padding: 10px;
 }
 .eng2-badge{
   font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--paper);
-  background: rgba(155,58,58,0.18);
-  border: 1px solid rgba(155,58,58,0.45);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--signal);
+  background: #FFFFFF;
+  border: 1px solid rgba(155,58,58,0.35);
   border-radius: 999px;
-  padding: 6px 16px;
+  padding: 5px 14px;
 }
 .eng2-sub{
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 8.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #7C8894;
-  margin-bottom: 6px;
+  color: var(--mist);
+  margin-bottom: 4px;
 }
 .eng2-pill{
   width: 88%;
   text-align: center;
   font-family: var(--font-body);
-  font-size: 12.5px;
+  font-size: 10.5px;
   font-weight: 600;
-  color: #C7CDD2;
-  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 8px 10px;
-  background: #1B232C;
+  padding: 6px 8px;
+  background: #FFFFFF;
 }
 .eng2-pill-hi{
   width: 88%;
   text-align: center;
   font-family: var(--font-body);
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--paper);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--signal);
   border: 1px solid rgba(155,58,58,0.45);
   border-radius: 999px;
-  padding: 8px 10px;
-  background: rgba(155,58,58,0.18);
+  padding: 6px 8px;
+  background: rgba(155,58,58,0.08);
 }
 .eng2-caption{
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 8.5px;
   letter-spacing: 0.05em;
   color: var(--mist);
   text-align: center;
 }
 .eng2-live-dot{
-  width: 7px; height: 7px;
+  width: 6px; height: 6px;
   border-radius: 999px;
   background: var(--signal);
   animation: eng2-pulse 2s ease-in-out infinite;
@@ -630,8 +622,8 @@ textarea{ resize: vertical; min-height: 120px; }
 /* --------------------------------- responsive --------------------------------- */
 
 @media (max-width: 900px){
-  .engine-diagram-card{ overflow-x: auto; }
-  .engine-diagram-card svg{ min-width: 680px; }
+  .engine2-scroll{ overflow-x: auto; padding-bottom: 4px; }
+  .engine2{ min-width: 560px; max-width: 560px; }
   .hero-grid{ grid-template-columns: 1fr; }
   .two-col{ grid-template-columns: 1fr; gap: 36px; }
   .card-grid{ grid-template-columns: 1fr; }
