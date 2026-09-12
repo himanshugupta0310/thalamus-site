@@ -117,8 +117,11 @@ p{ margin: 0; }
   width: 20px; height: 20px;
   flex: none;
 }
-.logo .mark circle{ fill: none; stroke: var(--steel); stroke-width: 1.4; }
-.logo .mark circle.c2{ stroke: var(--signal); }
+.logo .mark .spoke-muted{ stroke: var(--steel-light); stroke-width: 1.3; }
+.logo .mark .spoke-emph{ stroke: var(--signal); stroke-width: 1.6; }
+.logo .mark .node-muted{ fill: none; stroke: var(--steel-light); stroke-width: 1.2; }
+.logo .mark .node-emph{ fill: var(--signal); }
+.logo .mark .hub{ fill: var(--ink); }
 
 .nav-links{
   display: flex;
@@ -264,6 +267,27 @@ section:last-of-type{ border-bottom: none; }
 @keyframes draw{ to{ stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce){
   .trace-row path{ animation: none; stroke-dashoffset: 0; }
+}
+
+/* ------------------------------ bipartite diagram (product page) ------------------------------ */
+
+.bp-diagram{
+  border: 1px solid var(--line);
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 28px 24px 20px;
+}
+.bp-muted{ stroke: var(--steel-light); stroke-width: 1; opacity: 0.55; }
+.bp-emph{ stroke: var(--signal); stroke-width: 2; }
+.bp-node{ fill: none; stroke: var(--steel-light); stroke-width: 1.4; }
+.bp-node-hi{ fill: var(--signal); }
+.bp-hpp{ fill: none; stroke: var(--steel-light); stroke-width: 1.4; }
+.bp-hpp-hi{ fill: url(#bp-hatch); stroke: var(--signal); stroke-width: 2; }
+.bp-label{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--steel);
+  letter-spacing: 0.04em;
 }
 
 /* ------------------------------ chip / stat row ------------------------------ */
