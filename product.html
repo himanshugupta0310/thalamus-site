@@ -51,7 +51,7 @@
       <p>A five-minute agent call becomes 22 atomic facts. Most don't touch anything. One does, and it can move more than one part of the patient's state at once.</p>
     </div>
 
-    <div class="pipeline" style="flex-wrap:wrap;">
+    <div class="pipeline" style="flex-wrap:wrap; row-gap:12px; column-gap:8px;">
       <span class="node">L1: agent call transcript added to the patient's data store</span><span class="arrow">→</span>
       <span class="node">L2: the call is broken into 22 ACDPs</span><span class="arrow">→</span>
       <span class="node">L3: one ACDP, "started smoking 2&ndash;3 cigarettes since last month," ripples into existing state</span>
@@ -59,12 +59,6 @@
 
     <div class="bp-diagram" style="margin-top:32px;">
       <svg viewBox="0 0 760 215" preserveAspectRatio="xMidYMid meet" style="width:100%; height:auto;">
-        <defs>
-          <pattern id="bp-hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--signal)" stroke-width="1.4"></line>
-          </pattern>
-        </defs>
-
         <g class="bp-muted">
           <line x1="40" y1="30" x2="60" y2="181"></line>
           <line x1="40" y1="30" x2="292" y2="181"></line>
@@ -167,15 +161,6 @@
       <li>Doctor notes and insurance data</li>
     </ul>
   </div>
-  <div class="wrap" style="margin-top:48px;">
-    <div class="eyebrow" style="margin-bottom:12px;">Three sources exploding right now</div>
-    <div class="chip-row" style="margin-top:0; grid-template-columns: repeat(3, 1fr);">
-      <div class="chip"><div class="k">SOURCE 01</div><div class="v">Frequent testing &amp; full-body screenings</div></div>
-      <div class="chip"><div class="k">SOURCE 02</div><div class="v">Wearables</div></div>
-      <div class="chip"><div class="k">SOURCE 03</div><div class="v">Agent call transcripts</div></div>
-    </div>
-    <p class="form-note" style="margin-top:18px;">Each of these adds more evidence that has to be reconciled into the patient's state, not just stored.</p>
-  </div>
 </section>
 
 <section id="l2">
@@ -209,7 +194,7 @@
     <ul class="list-plain">
       <li>Whether a diagnosis is active or resolved</li>
       <li>Current medications</li>
-      <li>Disease control status</li>
+      <li>Current symptom's status</li>
       <li>Longitudinal trends across visits</li>
       <li>How new clinical information changes related downstream states</li>
       <li>A current, up-to-date patient profile</li>
@@ -264,7 +249,7 @@
 <section id="explain">
   <div class="wrap two-col">
     <div>
-      <div class="eyebrow">Explainability</div>
+      <div class="eyebrow">Verifiable</div>
       <h2 style="font-size:28px;">Every answer traces back to a source.</h2>
     </div>
     <ul class="list-plain">
