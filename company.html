@@ -33,7 +33,7 @@
   <div class="wrap">
     <div class="eyebrow">Company</div>
     <h1>Named for the brain's own relay station.</h1>
-    <p class="lede">The thalamus filters and routes incoming signal to the right part of the brain for processing. We think clinical AI needs the same layer: something that sits between raw patient data and every agent trying to reason over it.</p>
+    <p class="lede">The thalamus filters and routes incoming signal to the right part of the brain for processing. We think clinical AI needs the same layer: something that turns raw patient data into one computed clinical state every agent can reason from.</p>
   </div>
 </header>
 
@@ -44,8 +44,8 @@
       <h2 style="font-size:26px;">Millions of narrow-task clinical agents are coming.</h2>
     </div>
     <div>
-      <p class="quote-block">Each one needs a precise slice of a patient's history for its task, not the full longitudinal record. Handing an agent everything doesn't make it smarter. It makes it slower, more expensive, and more likely to hallucinate.</p>
-      <p style="margin-top:20px; color: var(--mist); font-size:15px;">Wearables and patient check-ins with agents are only going to add to that volume. The teams building clinical agents shouldn't each have to solve context filtering on their own.</p>
+      <p class="quote-block">Each one needs a precise slice of a patient's history for its task, not the full longitudinal record. Handing an agent everything doesn't make it smarter, and without a shared computed state, different agents can draw conflicting conclusions from the same patient.</p>
+      <p style="margin-top:20px; color: var(--mist); font-size:15px;">Frequent testing and full-body screenings, wearables, and agent call transcripts are only adding to that volume. The teams building clinical agents shouldn't each have to solve state computation on their own.</p>
     </div>
   </div>
 </section>
@@ -69,10 +69,11 @@
       <h2>A short list of positions the product is built on.</h2>
     </div>
     <ul class="list-plain">
-      <li>Context should be compiled per task, not dumped in full: more history is not more signal.</li>
+      <li>State should be computed, not just aggregated: more data is not more signal.</li>
       <li>Every data point an agent sees should trace back to a real source document.</li>
       <li>Conflicting data should be surfaced explicitly, never silently resolved by the agent.</li>
-      <li>Patient state should update the moment new data arrives, not on a batch schedule.</li>
+      <li>Only the parts of a patient's state that new evidence actually changes should update, the moment it arrives.</li>
+      <li>Every agent should reason from the same computed state, so conclusions stay consistent across agents.</li>
       <li>This is infrastructure for the companies building agents, not a product for hospitals or patients directly.</li>
     </ul>
   </div>

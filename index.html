@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thalamus | Infrastructure for clinical AI agents</title>
-<meta name="description" content="Thalamus filters, structures and routes raw patient data into the precise clinical context each AI agent needs, nothing more and nothing less.">
+<title>Thalamus | The computed patient state layer for clinical AI</title>
+<meta name="description" content="Thalamus continuously computes each patient's clinical state from every new test, wearable reading and agent conversation, so every agent reasons from the same coherent state.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -32,9 +32,9 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Infrastructure for clinical AI agents</div>
-      <h1>Every agent needs a slice of the patient's history, not all of it.</h1>
-      <p class="lede">Thalamus filters, structures and routes raw clinical data into exactly the context each agent needs to reason well: no more, no less, and every point traceable back to its source.</p>
+      <div class="eyebrow">The computed patient state layer</div>
+      <h1>One computed patient state. Every agent reasoning from it.</h1>
+      <p class="lede">Thalamus continuously computes each patient's clinical state from every new test, wearable reading and agent conversation, then gives every agent the same coherent state, so no two agents draw conflicting conclusions from the same patient.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Book a demo <span class="btn-arrow">→</span></a>
         <a href="product.html" class="btn btn-ghost">See the architecture</a>
@@ -59,7 +59,7 @@
       </div>
       <div class="hero-figure-caption">
         <span>RAW PATIENT DATA</span>
-        <span>ROUTED AGENT CONTEXT</span>
+        <span>COMPUTED PATIENT STATE</span>
       </div>
     </div>
   </div>
@@ -69,14 +69,20 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">The problem</div>
-      <h2>Clinical AI companies drown their own agents in context.</h2>
-      <p>Patient data arrives from EHRs, lab reports, imaging, clinical PDFs, wearables, doctor notes and agent conversations, fragmented across sources, duplicated across visits, and accumulating over years. Most teams hand all of it to the agent and hope it finds what matters.</p>
+      <h2>Patient data is exploding, and most systems just aggregate it.</h2>
+      <p>Three sources are growing fastest: frequent testing and full-body screenings, wearables, and agent call transcripts, on top of the usual EHRs, lab reports, imaging and doctor notes. Most teams store all of it and hand it to the agent as-is.</p>
     </div>
-    <div class="chip-row">
+    <div class="chip-row" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="chip"><div class="k">SOURCE 01</div><div class="v">Frequent testing &amp; full-body screenings</div></div>
+      <div class="chip"><div class="k">SOURCE 02</div><div class="v">Wearables</div></div>
+      <div class="chip"><div class="k">SOURCE 03</div><div class="v">Agent call transcripts</div></div>
+    </div>
+    <p style="margin-top:32px; color:var(--mist); max-width:640px;">More data isn't more signal. Without computing what new evidence means for a patient's existing conditions, medications and risk, different agents draw different, sometimes conflicting, conclusions from the same patient.</p>
+    <div class="chip-row" style="margin-top:24px;">
       <div class="chip"><div class="k">RESULT 01</div><div class="v">Lower quality reasoning</div></div>
       <div class="chip"><div class="k">RESULT 02</div><div class="v">Higher hallucination rate</div></div>
       <div class="chip"><div class="k">RESULT 03</div><div class="v">Unnecessary token usage</div></div>
-      <div class="chip"><div class="k">RESULT 04</div><div class="v">Added latency, weaker coherence</div></div>
+      <div class="chip"><div class="k">RESULT 04</div><div class="v">Inconsistent conclusions across agents</div></div>
     </div>
   </div>
 </section>
@@ -102,12 +108,12 @@
       <div class="layer" style="border-bottom-color: var(--line-dark);">
         <span class="tag">L3</span>
         <h3>Computed patient state</h3>
-        <p class="desc">Active vs. resolved conditions, current medications, disease control, longitudinal trends, all inferred from the atomic layer and kept current as new data arrives.</p>
+        <p class="desc">Active vs. resolved conditions, current medications, disease control, longitudinal trends, computed from the atomic layer and selectively updated as new evidence changes them.</p>
       </div>
       <div class="layer" style="border-bottom-color: var(--line-dark);">
         <span class="tag">L4</span>
         <h3>Intelligence layer</h3>
-        <p class="desc">Compiles the right context for each agent, matches patient state against clinical guidelines, and surfaces care gaps before an agent starts reasoning.</p>
+        <p class="desc">Gives each agent the relevant slice of computed state, matches it against clinical guidelines, and surfaces care gaps before an agent starts reasoning.</p>
       </div>
     </div>
     <div style="margin-top: 32px;">
@@ -127,7 +133,7 @@
       <div class="card">
         <span class="tag">CATEGORY</span>
         <h3>Clinical agents & scribes</h3>
-        <p>Teams building narrow-task agents and AI scribes that need a precise, task-scoped slice of context rather than a full chart dump.</p>
+        <p>Teams building narrow-task agents and AI scribes that need a precise, task-scoped slice of a patient's computed state rather than a full chart dump.</p>
       </div>
       <div class="card">
         <span class="tag">CATEGORY</span>
