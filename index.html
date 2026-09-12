@@ -30,8 +30,8 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap">
+    <div style="max-width:680px;">
       <div class="eyebrow">The computed patient state layer</div>
       <h1>One computed patient state. Every agent reasoning from it.</h1>
       <p class="lede">Thalamus continuously computes each patient's clinical state from every new test, wearable reading and agent conversation, then gives every agent the same coherent state, so no two agents draw conflicting conclusions from the same patient.</p>
@@ -40,24 +40,69 @@
         <a href="product.html" class="btn btn-ghost">See the architecture</a>
       </div>
     </div>
-    <div class="hero-figure">
-      <div class="trace-row">
-        <span class="trace-label">L1</span>
-        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 15 L14 4 L26 26 L40 8 L52 22 L66 3 L80 27 L94 10 L108 20 L122 6 L136 24 L150 12 L164 18 L178 5 L192 25 L206 9 L220 21 L234 7 L248 23 L262 11 L276 19 L290 4 L304 26 L318 8 L332 22 L346 13 L360 17 L374 6 L388 24 L400 15"/></svg>
-      </div>
-      <div class="trace-row">
-        <span class="trace-label">L2</span>
-        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 20 L30 12 L60 22 L90 14 L120 20 L150 10 L180 22 L210 14 L240 20 L270 12 L300 21 L330 15 L360 20 L400 14"/></svg>
-      </div>
-      <div class="trace-row">
-        <span class="trace-label">L3</span>
-        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 18 L60 15 L130 20 L200 16 L270 19 L340 15 L400 17"/></svg>
-      </div>
-      <div class="trace-row">
-        <span class="trace-label">L4</span>
-        <svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 15 L400 15"/></svg>
-      </div>
-      <div class="hero-figure-caption">
+
+    <div class="engine-diagram-card">
+      <svg viewBox="0 0 1040 400" preserveAspectRatio="xMidYMid meet" style="width:100%; height:auto;">
+        <g class="eng-line">
+          <path d="M190,56 C260,56 260,200 330,200" style="animation-delay:0.05s;"></path>
+          <path d="M190,200 L330,200" style="animation-delay:0.05s;"></path>
+          <path d="M190,344 C260,344 260,200 330,200" style="animation-delay:0.05s;"></path>
+          <path d="M330,200 L420,200" style="animation-delay:0.4s;"></path>
+          <path d="M620,200 L710,200" style="animation-delay:0.75s;"></path>
+          <path d="M710,200 C780,200 780,56 850,56" style="animation-delay:0.95s;"></path>
+          <path d="M710,200 L850,200" style="animation-delay:0.95s;"></path>
+          <path d="M710,200 C780,200 780,344 850,344" style="animation-delay:0.95s;"></path>
+        </g>
+        <circle class="eng-dot" cx="330" cy="200" r="4" style="animation-delay:0.35s;"></circle>
+        <circle class="eng-dot" cx="710" cy="200" r="4" style="animation-delay:0.7s;"></circle>
+
+        <g class="eng-fade-in" style="animation-delay:0s;">
+          <rect class="eng-card" x="0" y="20" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="24" y="62">Labs / notes /</text>
+          <text class="eng-label" x="24" y="80">other reports</text>
+
+          <rect class="eng-card" x="0" y="164" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="24" y="206">Wearable data</text>
+
+          <rect class="eng-card" x="0" y="308" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="24" y="350">Agent call transcripts</text>
+        </g>
+
+        <g class="eng-fade-in" style="animation-delay:0.35s;">
+          <rect class="eng-core-card" x="420" y="10" width="200" height="380" rx="6"></rect>
+          <text class="eng-core-title" x="520" y="52" text-anchor="middle">THALAMUS</text>
+          <text class="eng-core-sub" x="520" y="70" text-anchor="middle">DATA ENGINE</text>
+
+          <rect class="eng-step" x="440" y="100" width="160" height="46" rx="3"></rect>
+          <text class="eng-step-tag" x="456" y="128">L1</text>
+          <text class="eng-step-text" x="490" y="128">Ingest</text>
+
+          <rect class="eng-step" x="440" y="160" width="160" height="46" rx="3"></rect>
+          <text class="eng-step-tag" x="456" y="188">L2</text>
+          <text class="eng-step-text" x="490" y="188">Structure</text>
+
+          <rect class="eng-step-hi" x="440" y="220" width="160" height="46" rx="3"></rect>
+          <text class="eng-step-tag-hi" x="456" y="248">L3</text>
+          <text class="eng-step-text-hi" x="490" y="248">Propagate</text>
+
+          <rect class="eng-step" x="440" y="280" width="160" height="46" rx="3"></rect>
+          <text class="eng-step-tag" x="456" y="308">L4</text>
+          <text class="eng-step-text" x="490" y="308">Serve</text>
+        </g>
+
+        <g class="eng-fade-in" style="animation-delay:1s;">
+          <rect class="eng-card" x="850" y="20" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="874" y="62">Clinical context</text>
+
+          <rect class="eng-card" x="850" y="164" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="874" y="206">Guideline</text>
+          <text class="eng-label" x="874" y="224">recommender</text>
+
+          <rect class="eng-card" x="850" y="308" width="190" height="72" rx="4"></rect>
+          <text class="eng-label" x="874" y="350">Care gaps &amp; risks</text>
+        </g>
+      </svg>
+      <div class="hero-figure-caption" style="margin-top:14px;">
         <span>RAW PATIENT DATA</span>
         <span>COMPUTED PATIENT STATE</span>
       </div>
